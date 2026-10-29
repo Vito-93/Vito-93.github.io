@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vito Vattiata | Cloud & IoT Solutions Architect</title>
-  <meta name="description" content="Cloud & IoT Solutions Architect focused on AWS, event-driven architectures, enterprise integrations, and scalable digital platforms in energy and e-mobility." />
+  <title>Vito Vattiata | Robotics, Physical AI, IoT &amp; Cloud</title>
+  <meta name="description" content="Mechatronic engineer and IoT &amp; AWS Solutions Architect, now building in robotics and physical AI." />
   <meta name="theme-color" content="#0f172a" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <style>
     :root {
-      --bg: #0b1120;
-      --panel: #111827;
-      --panel-2: #0f172a;
       --text: #e5e7eb;
       --muted: #94a3b8;
       --line: rgba(148, 163, 184, 0.18);
@@ -20,18 +17,13 @@
       --accent-2: #0ea5e9;
       --card: rgba(15, 23, 42, 0.78);
       --white: #ffffff;
-      --max: 1360px;
+      --max: 1200px;
       --shadow: 0 22px 50px rgba(2, 6, 23, 0.45);
       --radius: 22px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -44,21 +36,15 @@
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .container {
       width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
     }
 
+    /* Top bar */
     .topbar {
       position: sticky;
       top: 0;
@@ -67,78 +53,38 @@
       background: rgba(2, 6, 23, 0.72);
       border-bottom: 1px solid rgba(148, 163, 184, 0.1);
     }
-
     .topbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      min-height: 74px;
+      min-height: 70px;
     }
+    .brand { display: flex; flex-direction: column; gap: 2px; }
+    .brand strong { font-size: 15px; letter-spacing: 0.02em; }
+    .brand span { font-size: 12px; color: var(--muted); }
+    .nav { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav a { font-size: 14px; color: #cbd5e1; transition: color 0.2s ease; }
+    .nav a:hover { color: var(--white); }
 
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand strong {
-      font-size: 15px;
-      letter-spacing: 0.02em;
-    }
-
-    .brand span {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav a {
-      font-size: 14px;
-      color: #cbd5e1;
-      transition: color 0.2s ease;
-    }
-
-    .nav a:hover {
-      color: var(--white);
-    }
-
-    .hero {
-      padding: 72px 0 34px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
-      gap: 30px;
-      align-items: stretch;
-    }
-
-    .hero-copy,
-    .hero-side,
-    .section-card,
-    .experience-item,
-    .project-card,
-    .cert-item,
-    .education-item,
-    .contact-card {
+    /* Cards */
+    .hero-copy, .hero-side, .section-card, .experience-item,
+    .project-card, .cert-item, .education-item, .contact-card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .hero-copy {
-      padding: 36px;
+    /* Hero */
+    .hero { padding: 64px 0 30px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 28px;
+      align-items: stretch;
     }
-
+    .hero-copy { padding: 36px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -153,57 +99,25 @@
       text-transform: uppercase;
       margin-bottom: 18px;
     }
-
     h1 {
       margin: 0;
-      font-size: clamp(36px, 6vw, 58px);
-      line-height: 1.02;
+      font-size: clamp(34px, 5.4vw, 54px);
+      line-height: 1.04;
       letter-spacing: -0.03em;
     }
-
     .hero-role {
       margin: 16px 0 0;
-      font-size: clamp(18px, 2.3vw, 24px);
+      font-size: clamp(16px, 2vw, 20px);
       color: #dbeafe;
       font-weight: 600;
     }
-
     .hero-text {
-      margin: 22px 0 0;
+      margin: 18px 0 0;
       font-size: 16px;
       color: #cbd5e1;
       max-width: 62ch;
     }
-
-    .chips,
-    .tag-list,
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 0;
-      margin: 22px 0 0;
-      list-style: none;
-    }
-
-    .chips li,
-    .tag-list li,
-    .pill-list li {
-      padding: 9px 12px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      color: #e2e8f0;
-      font-size: 13px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -215,18 +129,13 @@
       border: 1px solid transparent;
       font-weight: 600;
       font-size: 14px;
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+      transition: transform 0.18s ease;
     }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
+    .btn:hover { transform: translateY(-1px); }
     .btn-primary {
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
       color: #082f49;
     }
-
     .btn-secondary {
       background: rgba(15, 23, 42, 0.92);
       border-color: rgba(148, 163, 184, 0.22);
@@ -240,193 +149,95 @@
       justify-content: space-between;
       gap: 18px;
     }
-
-    .avatar-wrap {
+    .avatar-wrap { display: flex; align-items: center; gap: 18px; }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.35), rgba(14, 165, 233, 0.14));
+      border: 1px solid rgba(186, 230, 253, 0.18);
       display: flex;
       align-items: center;
-      gap: 18px;
-    }
-
-	.avatar {
-	  width: 96px;
-	  height: 96px;
-	  border-radius: 50%;
-	  background: linear-gradient(135deg, rgba(56, 189, 248, 0.35), rgba(14, 165, 233, 0.14));
-	  border: 1px solid rgba(186, 230, 253, 0.18);
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  overflow: hidden;
-	  flex: 0 0 96px;
-	}
-
-	.avatar img {
-	  width: 118%;
-	  height: 118%;
-	  object-fit: cover;
-	  object-position: center 28%;
-	}
-
-    .meta-title {
-      font-size: 19px;
+      justify-content: center;
+      overflow: hidden;
+      flex: 0 0 96px;
       font-weight: 700;
     }
-
-    .meta-subtitle {
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 14px;
+    .avatar img {
+      width: 118%;
+      height: 118%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center 28%;
     }
+    .meta-title { font-size: 19px; font-weight: 700; }
+    .meta-subtitle { margin-top: 6px; color: var(--muted); font-size: 14px; }
 
     .quick-facts {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       padding: 0;
-      margin: 4px 0 0;
+      margin: 0;
       list-style: none;
     }
-
     .quick-facts li {
       padding: 14px;
       border-radius: 18px;
       background: rgba(2, 6, 23, 0.4);
       border: 1px solid rgba(148, 163, 184, 0.12);
     }
+    .quick-facts strong { display: block; font-size: 18px; color: #f8fafc; }
+    .quick-facts span { display: block; margin-top: 4px; color: var(--muted); font-size: 13px; }
 
-    .quick-facts strong {
-      display: block;
-      font-size: 18px;
-      color: #f8fafc;
-    }
-
-    .quick-facts span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .meta-links {
-      display: grid;
-      gap: 10px;
-    }
-
-    .meta-link {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: rgba(2, 6, 23, 0.42);
-      border: 1px solid rgba(148, 163, 184, 0.12);
-      color: #dbeafe;
-      font-size: 14px;
-    }
-
-    section {
-      padding: 16px 0;
-    }
-
-    .section-head {
-      margin-bottom: 20px;
-    }
-
+    /* Sections */
+    section { padding: 18px 0; }
+    .section-head { margin-bottom: 20px; }
     .section-head h2 {
       margin: 0;
       font-size: 28px;
       line-height: 1.15;
       letter-spacing: -0.02em;
     }
+    .section-head p { margin: 10px 0 0; color: var(--muted); max-width: 72ch; }
+    .section-card { padding: 28px; }
+    .section-card p { margin: 0 0 14px; color: #cbd5e1; }
+    .section-card p:last-child { margin-bottom: 0; }
 
-    .section-head p {
-      margin: 10px 0 0;
-      color: var(--muted);
-      max-width: 72ch;
-    }
-
-    .section-card {
-      padding: 28px;
-    }
-
-    .experience-list,
-    .education-list,
-    .cert-grid,
-    .project-grid,
-    .contact-grid {
+    /* Projects */
+    .featured {
       display: grid;
-      gap: 18px;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
     }
-
-    .experience-item,
-    .education-item,
-    .cert-item,
-    .project-card,
-    .contact-card {
-      padding: 24px;
+    .featured img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 280px;
+      max-height: 440px;
     }
-
-    .experience-top,
-    .education-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .experience-top h3,
-    .education-top h3,
-    .project-card h3,
-    .cert-item h3,
-    .contact-card h3 {
-      margin: 0;
-      font-size: 21px;
-      line-height: 1.2;
-    }
-
-    .company,
-    .school {
-      margin-top: 6px;
-      color: #bae6fd;
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    .date {
-      color: var(--muted);
-      font-size: 14px;
-      white-space: nowrap;
-    }
-
-    .experience-item p,
-    .education-item p,
-    .project-card p,
-    .cert-item p,
-    .contact-card p {
-      margin: 14px 0 0;
-      color: #cbd5e1;
-      font-size: 15px;
-    }
-
-    .bullet-list {
-      margin: 16px 0 0;
-      padding-left: 18px;
-      color: #dbe4ee;
-    }
-
-    .bullet-list li {
-      margin-bottom: 10px;
-    }
+    .featured-body { padding: 28px; }
+    .featured-body h3 { margin: 0; font-size: 24px; line-height: 1.2; }
+    .featured-body p { margin: 14px 0 0; color: #cbd5e1; font-size: 15px; }
 
     .project-grid {
+      display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
     }
-
-    .project-card .project-label {
+    .project-card { padding: 24px; }
+    .project-card h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+    .project-card p { margin: 12px 0 0; color: #cbd5e1; font-size: 15px; }
+    .project-label {
       display: inline-flex;
       margin-bottom: 14px;
-      padding: 7px 11px;
+      padding: 6px 11px;
       border-radius: 999px;
       background: rgba(56, 189, 248, 0.12);
       color: #bae6fd;
@@ -435,19 +246,60 @@
       letter-spacing: 0.05em;
       border: 1px solid rgba(56, 189, 248, 0.16);
     }
-
-    .cert-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .project-label.wip {
+      background: rgba(250, 204, 21, 0.12);
+      color: #fde68a;
+      border-color: rgba(250, 204, 21, 0.22);
     }
 
-    .cert-item i,
-    .contact-card i {
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 16px 0 0;
+      list-style: none;
+    }
+    .tag-list li {
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      color: #e2e8f0;
+      font-size: 12.5px;
+    }
+
+    /* Experience, education */
+    .experience-list, .education-list, .cert-grid, .contact-grid { display: grid; gap: 18px; }
+    .experience-item, .education-item, .cert-item, .contact-card { padding: 24px; }
+    .experience-top, .education-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .experience-top h3, .education-top h3, .cert-item h3, .contact-card h3 {
+      margin: 0;
       font-size: 20px;
-      color: #7dd3fc;
+      line-height: 1.2;
     }
+    .company, .school { margin-top: 6px; color: #bae6fd; font-weight: 600; font-size: 15px; }
+    .date { color: var(--muted); font-size: 14px; white-space: nowrap; }
+    .experience-item p, .education-item p, .cert-item p, .contact-card p {
+      margin: 14px 0 0;
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+    .bullet-list { margin: 14px 0 0; padding-left: 18px; color: #dbe4ee; }
+    .bullet-list li { margin-bottom: 8px; }
+    .role { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+    .role:first-of-type { margin-top: 16px; }
+    .role h4 { margin: 0; font-size: 17px; }
 
-    .cert-icon,
-    .contact-icon {
+    .cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .cert-icon, .contact-icon {
       width: 44px;
       height: 44px;
       border-radius: 14px;
@@ -456,16 +308,10 @@
       justify-content: center;
       background: rgba(14, 165, 233, 0.12);
       border: 1px solid rgba(56, 189, 248, 0.16);
+      margin-bottom: 14px;
     }
-
-    .contact-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .contact-card a {
-      color: #dbeafe;
-      word-break: break-word;
-    }
+    .cert-icon i, .contact-icon i { font-size: 20px; color: #7dd3fc; }
+    .contact-card a { color: #dbeafe; word-break: break-word; }
 
     footer {
       padding: 14px 0 48px;
@@ -475,56 +321,20 @@
     }
 
     @media (max-width: 1024px) {
-      .hero-grid,
-      .project-grid,
-      .contact-grid,
-      .cert-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 54px;
-      }
+      .hero-grid, .project-grid, .contact-grid, .cert-grid, .featured { grid-template-columns: 1fr; }
+      .featured img { max-height: 360px; }
+      .hero { padding-top: 48px; }
     }
 
     @media (max-width: 760px) {
-      .topbar-inner {
-        padding: 14px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav {
-        gap: 14px;
-      }
-
-      .hero-copy,
-      .hero-side,
-      .section-card,
-      .experience-item,
-      .project-card,
-      .cert-item,
-      .education-item,
-      .contact-card {
-        padding: 22px;
-      }
-
-      .quick-facts {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 38px;
-      }
-
-      .section-head h2 {
-        font-size: 24px;
-      }
-
-      .experience-top,
-      .education-top {
-        flex-direction: column;
-      }
+      .topbar-inner { padding: 14px 0; align-items: flex-start; flex-direction: column; }
+      .nav { gap: 14px; justify-content: flex-start; }
+      .hero-copy, .hero-side, .section-card, .experience-item, .project-card,
+      .cert-item, .education-item, .contact-card, .featured-body { padding: 22px; }
+      .quick-facts { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+      .section-head h2 { font-size: 24px; }
+      .experience-top, .education-top { flex-direction: column; gap: 4px; }
     }
   </style>
 </head>
@@ -533,13 +343,12 @@
     <div class="container topbar-inner">
       <a class="brand" href="#home" aria-label="Go to top">
         <strong>Vito Vattiata</strong>
-        <span>Cloud &amp; IoT Solutions Architect</span>
+        <span>Robotics &amp; Physical AI · IoT &amp; Cloud</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Focus Areas</a>
-        <a href="#certifications">Certifications</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -550,23 +359,17 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow"><i class="fa-solid fa-cloud"></i> AWS • IoT • Distributed Systems</div>
-          <h1>Designing cloud solutions that connect systems, data, and business goals.</h1>
-          <p class="hero-role">Cloud &amp; IoT Solutions Architect</p>
+          <div class="eyebrow"><i class="fa-solid fa-robot"></i> Robotics · Physical AI · IoT &amp; Cloud</div>
+          <h1>From IoT platforms in production to robots built by hand.</h1>
+          <p class="hero-role">Mechatronic Engineer · IoT &amp; AWS Solutions Architect · Robotics &amp; Physical AI</p>
           <p class="hero-text">
-            I work on AWS-based architectures for enterprise environments in energy, e-mobility, and smart systems,
-            with a focus on cloud-native design, event-driven integrations, scalable data flows, and solution delivery.
+            I spent five years designing IoT and cloud platforms for enterprise clients.
+            In 2026 I left my job to go back to robotics, the field I trained in, and build something
+            with my own hands at the intersection of physical robots and AI.
           </p>
-          <ul class="chips" aria-label="Core expertise">
-            <li>AWS Architecture</li>
-            <li>Event-Driven Systems</li>
-            <li>IoT Platforms</li>
-            <li>System Integration</li>
-            <li>Cloud Native</li>
-            <li>Enterprise Delivery</li>
-          </ul>
           <div class="hero-actions">
             <a class="btn btn-primary" href="mailto:v_vattiata@outlook.it"><i class="fa-regular fa-envelope"></i> Contact me</a>
+            <a class="btn btn-secondary" href="Vito-Vattiata-CV.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/vvattiata" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             <a class="btn btn-secondary" href="https://github.com/Vito-93" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
@@ -579,34 +382,28 @@
             </div>
             <div>
               <div class="meta-title">Vito Vattiata</div>
-              <div class="meta-subtitle">Based in Turin, Italy • Available for remote-first opportunities</div>
+              <div class="meta-subtitle">Based in Turin, Italy</div>
             </div>
           </div>
 
           <ul class="quick-facts">
             <li>
-              <strong>4+ years</strong>
-              <span>Professional experience in cloud and IoT architecture</span>
+              <strong>5+ years</strong>
+              <span>Designing IoT and cloud platforms in production</span>
             </li>
             <li>
-              <strong>2 AWS certs</strong>
-              <span>Solutions Architect Professional and Associate</span>
+              <strong>10,000+ devices</strong>
+              <span>Fleets managed by the platforms I worked on</span>
             </li>
             <li>
-              <strong>Energy &amp; e-mobility</strong>
-              <span>Enterprise projects, integrations, and distributed platforms</span>
+              <strong>AWS Professional</strong>
+              <span>Certified Solutions Architect, Professional and Associate</span>
             </li>
             <li>
-              <strong>Architecture to delivery</strong>
-              <span>Requirements, design, governance, and implementation support</span>
+              <strong>Hands-on</strong>
+              <span>Robot prototypes designed, printed and wired from scratch</span>
             </li>
           </ul>
-
-          <div class="meta-links">
-            <a class="meta-link" href="mailto:v_vattiata@outlook.it"><i class="fa-regular fa-envelope"></i> v_vattiata@outlook.it</a>
-            <a class="meta-link" href="https://www.linkedin.com/in/vvattiata" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/vvattiata</a>
-            <a class="meta-link" href="https://github.com/Vito-93" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> github.com/Vito-93</a>
-          </div>
         </aside>
       </div>
     </section>
@@ -615,31 +412,116 @@
       <div class="container">
         <div class="section-head">
           <h2>About</h2>
-          <p>
-            Cloud &amp; IoT Solutions Architect with experience in designing AWS-based solutions for enterprise environments across
-            energy, e-mobility, e-health, and smart systems. I work on cloud-native architectures, data flows, system integrations,
-            and event-driven patterns, supporting projects from requirements gathering to delivery and solution evolution.
-          </p>
         </div>
         <div class="section-card">
           <p>
-            Throughout my experience, I have worked closely with clients, development teams, and business stakeholders to turn complex needs into scalable,
-            reliable, and maintainable architectures, with a strong focus on IoT, AWS services, distributed systems, and technical governance.
+            Mechatronic engineer with a BSc in aerospace engineering and a master's in Smart Product Design.
+            I like moving across different fields, and over the years I've built cross-disciplinary skills
+            spanning hardware, software and cloud.
           </p>
-          <ul class="pill-list">
-            <li>AWS Lambda</li>
-            <li>API Gateway</li>
-            <li>DynamoDB</li>
-            <li>S3</li>
-            <li>SQS</li>
-            <li>IoT Core</li>
-            <li>Kafka</li>
-            <li>Docker</li>
-            <li>Terraform</li>
-            <li>CloudFormation</li>
-            <li>VPC</li>
-            <li>CloudWatch</li>
-          </ul>
+          <p>
+            I spent five years designing IoT and cloud platforms for energy, e-mobility, e-health and smart city
+            projects, first at Olivetti and then at Sense Reply, where I specialised in AWS, following projects
+            from requirements gathering through to release.
+          </p>
+          <p>
+            In 2026 I stepped away from employment to return to robotics, the field I trained in, and build something
+            with my own hands at the intersection of physical robots and AI. I aim for it to become something useful
+            that can create jobs and opportunities. I believe now is the right time for robotics and physical AI,
+            and that there is real room to build, not by competing with the big players, but by filling gaps in
+            sectors they haven't reached yet.
+          </p>
+          <p>
+            I see myself as a maker: I move across hardware, software and cloud, and I know how to take an idea
+            from requirements to a working system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Things I've built</h2>
+          <p>Personal projects, built outside work, from robots to small connected systems.</p>
+        </div>
+
+        <article class="featured">
+          <img src="robot.jpg" alt="Red 3D-printed antweight combat robot with a horizontal spinner blade" loading="lazy" />
+          <div class="featured-body">
+            <span class="project-label">Robotics</span>
+            <h3>Antweight combat robot (150 g)</h3>
+            <p>
+              Designed and built from scratch: parametric CAD chassis, 3D-printed and assembled by hand.
+              Two N20 gearmotors for the drive and a brushless motor powering a horizontal spinner weapon,
+              with dedicated speed controllers, radio control and a 2S LiPo battery.
+            </p>
+            <p>
+              Iterated through prototypes, failures and repairs to get it working within a 150 g weight limit.
+            </p>
+            <ul class="tag-list">
+              <li>Onshape CAD</li>
+              <li>3D printing</li>
+              <li>Brushless motors</li>
+              <li>Electronics</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-label wip">In progress</span>
+            <h3>Robot arm for physical AI</h3>
+            <p>Building a robot arm to be trained from human demonstrations using imitation learning.</p>
+            <ul class="tag-list">
+              <li>Imitation learning</li>
+              <li>LeRobot</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="project-label">Robotics</span>
+            <h3>Wi-Fi controlled robot with camera</h3>
+            <p>Robot driven remotely from a web interface, with live video streaming from its onboard camera.</p>
+            <ul class="tag-list">
+              <li>Wi-Fi</li>
+              <li>Video streaming</li>
+              <li>Web UI</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="project-label">IoT</span>
+            <h3>Air quality monitor</h3>
+            <p>ESP32 node with a laser-scattering particulate sensor (PM2.5), streaming telemetry to a database with a live dashboard.</p>
+            <ul class="tag-list">
+              <li>ESP32</li>
+              <li>Sensors</li>
+              <li>Telemetry</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="project-label">AI &amp; automation</span>
+            <h3>Personal finance automation</h3>
+            <p>Pipeline that reads bank emails, classifies expenses with AI and loads them into a self-hosted tracking system with recurring spending reports.</p>
+            <ul class="tag-list">
+              <li>AI</li>
+              <li>Python</li>
+              <li>Self-hosted</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="project-label">Infrastructure</span>
+            <h3>Self-hosted home server</h3>
+            <p>Raspberry Pi running Nextcloud, with automated backups and secure remote access.</p>
+            <ul class="tag-list">
+              <li>Raspberry Pi</li>
+              <li>Linux</li>
+              <li>Nextcloud</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -648,170 +530,87 @@
       <div class="container">
         <div class="section-head">
           <h2>Experience</h2>
-          <p>
-            Roles that shaped my path from software development to solution architecture, with increasing responsibility across design,
-            integration, delivery, and enterprise cloud evolution.
-          </p>
         </div>
 
         <div class="experience-list">
           <article class="experience-item">
             <div class="experience-top">
               <div>
-                <h3>IoT System Architect | AWS Solutions Architect</h3>
-                <div class="company">Reply S.p.A.</div>
+                <h3>Robotics &amp; Physical AI</h3>
+                <div class="company">Self-employed · Turin</div>
               </div>
-              <div class="date">Jul 2023 – Present</div>
+              <div class="date">Aug 2026 – Present</div>
             </div>
             <p>
-              I work on AWS cloud-native architectures for enterprise platforms in the IoT, energy, and e-mobility domains,
-              with a focus on scalability, integration, and solution governance.
+              After five years working on cloud and IoT platforms, I left a senior architect role to focus full-time
+              on robotics and physical AI, the field I trained in.
             </p>
             <ul class="bullet-list">
-              <li>Define application architecture, data flows, and integration patterns across AWS services, legacy systems, and external platforms.</li>
-              <li>Support the full journey from requirements analysis to delivery, collaborating with development teams, business stakeholders, and governance functions.</li>
-              <li>Contribute to large-scale distributed platforms through data model design, event-driven architectures, data pipelines, and asynchronous integrations.</li>
-              <li>Support design reviews, architecture documentation, technical trade-off analysis, and adoption of AWS best practices in enterprise environments.</li>
+              <li>Building a robot arm to be trained from human demonstrations using imitation learning (LeRobot open-source framework).</li>
+              <li>Designing mobile robot prototypes from scratch, from parametric CAD and 3D-printed chassis to motor control electronics and radio control.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-top">
+              <div>
+                <h3>IoT System Architect | AWS Solutions Architect</h3>
+                <div class="company">Sense Reply · Turin</div>
+              </div>
+              <div class="date">Jul 2023 – Jul 2026</div>
+            </div>
+            <p>
+              I designed cloud-native IoT platforms on AWS for enterprise clients in energy and e-mobility,
+              following projects from requirements to production.
+            </p>
+            <ul class="bullet-list">
+              <li>Architectures for 6–7 enterprise clients, including a major European utility, with fleets of 10,000+ connected devices.</li>
+              <li>Proposed and designed an AI diagnostic assistant for alarm troubleshooting, connecting an open model to platform logs and database records through MCP. It went into production, and on the hardest cases the analysis went from half a day to about 30 minutes.</li>
+              <li>Near real-time telemetry and remote monitoring of distributed device fleets, using event-driven patterns and integrations with legacy systems and external platforms.</li>
+              <li>Migration of legacy and SaaS solutions to proprietary cloud-native platforms on AWS.</li>
+              <li>Technical point of reference for clients and mentor to junior engineers in a 7-person team, coordinating with other teams.</li>
             </ul>
             <ul class="tag-list">
               <li>AWS</li>
-              <li>IoT</li>
-              <li>Cloud Native</li>
-              <li>Event-Driven Architecture</li>
-              <li>System Integration</li>
-              <li>Technical Governance</li>
-            </ul>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-top">
-              <div>
-                <h3>Smart IoT Product Solutions Designer</h3>
-                <div class="company">Olivetti S.p.A.</div>
-              </div>
-              <div class="date">Nov 2021 – Jul 2023</div>
-            </div>
-            <p>
-              I worked on the design and prototyping of IoT solutions in the smart city and smart warehouse domains,
-              bridging customer needs, functional requirements, and technical solution design.
-            </p>
-            <ul class="bullet-list">
-              <li>Contributed to solution definition from business need to structured requirements for technical teams.</li>
-              <li>Supported architectural choices, coordinated with development teams, and followed initiatives through go-live.</li>
-              <li>Worked on digital transformation use cases where operational and business needs had to become concrete, scalable solutions.</li>
-            </ul>
-            <ul class="tag-list">
-              <li>IoT Solution Design</li>
-              <li>Product Thinking</li>
-              <li>Requirements Analysis</li>
-              <li>Technical Coordination</li>
-            </ul>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-top">
-              <div>
-                <h3>Backend Developer</h3>
-                <div class="company">Olivetti S.p.A.</div>
-              </div>
-              <div class="date">Jan 2021 – Oct 2021</div>
-            </div>
-            <p>
-              I worked on backend development for applications in the e-health monitoring and smart energy domains,
-              contributing to software features, technical analysis, and release support.
-            </p>
-            <ul class="bullet-list">
-              <li>Contributed to the implementation and evolution of application services used for remote monitoring and digital solutions.</li>
-              <li>Strengthened my software engineering foundations across implementation, technical analysis, and delivery support.</li>
-              <li>Built the hands-on development perspective that later supported my transition into architecture and system design roles.</li>
-            </ul>
-            <ul class="tag-list">
-              <li>Backend Development</li>
-              <li>Python</li>
-              <li>API Integration</li>
-              <li>Cloud Applications</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-head">
-          <h2>Focus Areas</h2>
-          <p>
-            A few of the domains and architecture themes I have worked on most often across enterprise projects.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="project-label">Energy &amp; IoT</span>
-            <h3>Enterprise IoT platforms on AWS</h3>
-            <p>
-              Architecture design for connected platforms handling device management, telemetry, integrations, and large-scale distributed workloads.
-            </p>
-            <ul class="tag-list">
               <li>IoT Core</li>
-              <li>DynamoDB</li>
-              <li>S3</li>
               <li>Lambda</li>
+              <li>DynamoDB</li>
+              <li>Bedrock</li>
+              <li>MCP</li>
+              <li>Event-driven</li>
             </ul>
           </article>
 
-          <article class="project-card">
-            <span class="project-label">Integration</span>
-            <h3>Event-driven and asynchronous systems</h3>
-            <p>
-              Design of integration patterns based on queues, events, serverless components, and reliable communication between cloud services and external systems.
-            </p>
-            <ul class="tag-list">
-              <li>SQS</li>
-              <li>API Gateway</li>
-              <li>Kafka</li>
-              <li>Distributed Systems</li>
-            </ul>
-          </article>
+          <article class="experience-item">
+            <div class="experience-top">
+              <div>
+                <h3>Olivetti S.p.A.</h3>
+                <div class="company">Ivrea</div>
+              </div>
+              <div class="date">Jan 2021 – Jul 2023</div>
+            </div>
 
-          <article class="project-card">
-            <span class="project-label">E-mobility</span>
-            <h3>Scalable digital platforms</h3>
-            <p>
-              Support for the evolution of cloud-native platforms focused on maintainability, security, customization, and long-term operational sustainability.
-            </p>
-            <ul class="tag-list">
-              <li>Cloud Native</li>
-              <li>Microservices</li>
-              <li>Architecture Governance</li>
-              <li>Delivery</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+            <div class="role">
+              <div class="experience-top">
+                <h4>Smart IoT Products Solutions Designer</h4>
+                <div class="date">Nov 2021 – Jul 2023</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Designed and prototyped IoT solutions for smart city, smart warehouse, e-health monitoring and energy.</li>
+                <li>Turned customer and business needs into structured requirements for development teams.</li>
+                <li>Supported architecture choices and followed initiatives through to go-live.</li>
+              </ul>
+            </div>
 
-    <section id="certifications">
-      <div class="container">
-        <div class="section-head">
-          <h2>Certifications</h2>
-          <p>
-            Certifications that support my focus on AWS architecture and continuous professional growth.
-          </p>
-        </div>
-        <div class="cert-grid">
-          <article class="cert-item">
-            <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
-            <h3>AWS Certified Solutions Architect – Professional</h3>
-            <p>
-              Advanced certification focused on designing complex, secure, resilient, and cost-efficient architectures on AWS.
-            </p>
-          </article>
-          <article class="cert-item">
-            <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
-            <h3>AWS Certified Solutions Architect – Associate</h3>
-            <p>
-              Foundational architecture certification covering core AWS design principles, best practices, and scalable cloud solutions.
-            </p>
+            <div class="role">
+              <div class="experience-top">
+                <h4>Backend Developer</h4>
+                <div class="date">Jan 2021 – Oct 2021</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Developed backend features for remote patient monitoring (e-health) and smart energy management platforms, from implementation to release support.</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
@@ -821,9 +620,6 @@
       <div class="container">
         <div class="section-head">
           <h2>Education</h2>
-          <p>
-            A technical background that combines system thinking, engineering fundamentals, and product-oriented digital design.
-          </p>
         </div>
         <div class="education-list">
           <article class="education-item">
@@ -835,8 +631,9 @@
               <div class="date">2021 – 2023</div>
             </div>
             <p>
-              Multidisciplinary program focused on smart products and solutions, combining IoT, sensors, cloud-native application design,
-              databases, networking, data analysis, design thinking, and digital transformation.
+              Industry master run with Olivetti, completed while working full-time. Product and design thinking
+              applied to smart connected products, from user needs to working prototypes, covering IoT, sensors,
+              HW/SW integration and cloud-native architectures.
             </p>
           </article>
 
@@ -849,7 +646,8 @@
               <div class="date">2017 – 2020</div>
             </div>
             <p>
-              Engineering degree focused on the integration of mechanics, electronics, automation, and software, with a strong systems-oriented approach.
+              Integration of mechanics, electronics, automation and software.
+              Thesis: Modeling and identification of wheel-soil interaction for precision agriculture robotics.
             </p>
           </article>
 
@@ -862,8 +660,22 @@
               <div class="date">2012 – 2017</div>
             </div>
             <p>
-              Engineering foundation with a strong analytical and modeling-oriented background, later applied to software, systems, and architecture work.
+              Analytical and modeling foundation: aerodynamics, control of mechanical systems, numerical models and simulation.
+              Thesis: Numerical model of dry friction applied to an electro-hydraulic servomechanism.
             </p>
+          </article>
+        </div>
+
+        <div class="cert-grid" style="margin-top: 18px;">
+          <article class="cert-item">
+            <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+            <h3>AWS Certified Solutions Architect – Professional</h3>
+            <p>Issued Dec 2025.</p>
+          </article>
+          <article class="cert-item">
+            <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+            <h3>AWS Certified Solutions Architect – Associate</h3>
+            <p>Issued Mar 2024.</p>
           </article>
         </div>
       </div>
@@ -873,9 +685,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Get in touch</h2>
-          <p>
-            Open to conversations about cloud architecture, IoT platforms, enterprise integrations, and remote-first opportunities.
-          </p>
+          <p>Open to conversations about robotics, physical AI, IoT platforms and building something new.</p>
         </div>
         <div class="contact-grid">
           <article class="contact-card">
@@ -883,13 +693,11 @@
             <h3>Email</h3>
             <p><a href="mailto:v_vattiata@outlook.it">v_vattiata@outlook.it</a></p>
           </article>
-
           <article class="contact-card">
             <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
             <h3>LinkedIn</h3>
             <p><a href="https://www.linkedin.com/in/vvattiata" target="_blank" rel="noreferrer">linkedin.com/in/vvattiata</a></p>
           </article>
-
           <article class="contact-card">
             <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
             <h3>GitHub</h3>
@@ -901,9 +709,7 @@
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Vito Vattiata · Built as a simple static page for GitHub Pages.
-    </div>
+    <div class="container">© 2026 Vito Vattiata</div>
   </footer>
 </body>
 </html>
